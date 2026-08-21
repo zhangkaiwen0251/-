@@ -25,11 +25,13 @@ function updateTargets(clientX, clientY) {
 
   eyes.forEach((eye, index) => {
     const rect = eye.getBoundingClientRect();
+
     const iris = eye.querySelector(".iris");
     const irisRadius = iris ? iris.getBoundingClientRect().width / 2 : rect.width * 0.22;
     const padding = Math.max(4, rect.width * 0.025);
     const radiusX = Math.max(0, rect.width / 2 - irisRadius - padding);
     const radiusY = Math.max(0, rect.height / 2 - irisRadius - padding);
+
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
     const deltaX = clientX - centerX;

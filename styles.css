@@ -1,4 +1,5 @@
 :root {
+
   --eye-width: clamp(8.2rem, 18vw, 13.8rem);
   --eye-height: clamp(8.8rem, 19vw, 14.8rem);
   --iris-size: clamp(4.15rem, 8.5vw, 6.9rem);
@@ -32,6 +33,7 @@ body {
     radial-gradient(circle at 20% 16%, rgba(221, 235, 255, 0.95), transparent 24rem),
     radial-gradient(circle at 86% 14%, rgba(255, 214, 225, 0.78), transparent 23rem),
     linear-gradient(140deg, #f5f7fb 0%, #dfe5ee 44%, #cbd2dc 100%);
+
 }
 
 .stage {
@@ -39,10 +41,13 @@ body {
   display: grid;
   min-height: 100vh;
   place-items: center;
+
   padding: clamp(1rem, 3vw, 2.5rem);
+
   isolation: isolate;
   touch-action: none;
 }
+
 
 .ambient {
   position: fixed;
@@ -178,11 +183,13 @@ h1 {
 .creature:active .eye::after { transform: translateY(83%); }
 
 .iris, .pupil, .shine { position: absolute; border-radius: 50%; transform: translate3d(var(--pupil-x, 0), var(--pupil-y, 0), 0); will-change: transform; }
+
 .iris {
   top: calc(50% - var(--iris-size) / 2);
   left: calc(50% - var(--iris-size) / 2);
   width: var(--iris-size);
   height: var(--iris-size);
+
   background: radial-gradient(circle at 52% 52%, #1a0103 0 27%, transparent 28%), radial-gradient(circle at 46% 40%, #ff5460 0 11%, #ef121e 28%, #9d000b 58%, var(--red-deep) 100%);
   box-shadow: inset .35rem .35rem .6rem rgba(255,255,255,.18), inset -.5rem -.7rem .85rem rgba(44,0,4,.56), 0 0 0 clamp(.16rem,.5vw,.34rem) rgba(63,0,6,.78);
 }
@@ -209,4 +216,5 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+
 }
