@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一个完整的互动网页：一双卡通眼睛会平滑跟随鼠标或手指移动。"
+    />
+    <title>跟随鼠标的互动眼睛</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <div class="orb orb--one" aria-hidden="true"></div>
+      <div class="orb orb--two" aria-hidden="true"></div>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Interactive Eyes</p>
+        <h1 id="page-title">把光标移过来，看看它在看哪里</h1>
+        <p class="intro">这双眼睛会实时追踪鼠标和触控位置，并用缓动动画保持自然、柔和的移动。</p>
+
+        <div class="character" aria-label="一双会跟随鼠标转动的眼睛">
+          <div class="brow brow--left" aria-hidden="true"></div>
+          <div class="brow brow--right" aria-hidden="true"></div>
+          <div class="eyes" aria-hidden="true">
+            <div class="eye" data-eye>
+              <span class="iris"></span>
+              <span class="pupil"></span>
+              <span class="sparkle sparkle--large"></span>
+              <span class="sparkle sparkle--small"></span>
+            </div>
+            <div class="eye" data-eye>
+              <span class="iris"></span>
+              <span class="pupil"></span>
+              <span class="sparkle sparkle--large"></span>
+              <span class="sparkle sparkle--small"></span>
+            </div>
+          </div>
+          <div class="smile" aria-hidden="true"></div>
+        </div>
+
+        <p class="hint" id="hint">移动鼠标，或在手机上拖动手指。</p>
+      </section>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
